@@ -36,6 +36,14 @@ a {
   position: relative;
 }
 
+i {
+  transition: opacity 300ms ease;
+}
+
+i:hover {
+  opacity: 0.7;
+}
+
 .link__hover-effect::after {
   content: "";
   position: absolute;
@@ -240,6 +248,23 @@ nav {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.wave {
+  display: inline-block;
+  animation: anime-wave 500ms infinite ease-in-out;
+}
+
+@keyframes anime-wave {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0);
   }
 }
 
